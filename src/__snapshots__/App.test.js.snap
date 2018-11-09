@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the Homepage for the logged in user (Heisenberg) 1`] = `
+<App
+  isLoggedIn={true}
+  username="Heisenberg"
+>
+  <div
+    className="App"
+  >
+    <Home
+      tasks={
+        Array [
+          "8am - Chemistry classes at school",
+          "12:30pm - Meet Jesse for lunch",
+          "15pm - Meet Gus at the Pollos Hermanos",
+          "20pm - Dinner by the pool with Hank and Marie",
+        ]
+      }
+      username="Heisenberg"
+    >
+      <div>
+        <p>
+          Welcome, 
+          Heisenberg
+          !
+        </p>
+        <ul>
+          <li
+            key="0"
+          >
+            8am - Chemistry classes at school
+          </li>
+          <li
+            key="1"
+          >
+            12:30pm - Meet Jesse for lunch
+          </li>
+          <li
+            key="2"
+          >
+            15pm - Meet Gus at the Pollos Hermanos
+          </li>
+          <li
+            key="3"
+          >
+            20pm - Dinner by the pool with Hank and Marie
+          </li>
+        </ul>
+      </div>
+    </Home>
+  </div>
+</App>
+`;
+
+exports[`should render the Homepage for the logged in user without tasks 1`] = `
+<App
+  isLoggedIn={true}
+  username="Jesse"
+>
+  <div
+    className="App"
+  >
+    <Home
+      username="Jesse"
+    >
+      <div>
+        <p>
+          Welcome, 
+          Jesse
+          !
+        </p>
+        <ul />
+      </div>
+    </Home>
+  </div>
+</App>
+`;
+
+exports[`should render the homepage for the non logged in user 1`] = `
+<App
+  isLoggedIn={false}
+  username={null}
+>
+  <div
+    className="App"
+  >
+    <p>
+      Hello, visitor. Sign in to continue.
+    </p>
+  </div>
+</App>
+`;
