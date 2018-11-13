@@ -10,7 +10,6 @@ it("should render the homepage for the non logged in user", () => {
     username: null
   }
   const app = mount(<App {...props} />)
-  expect(toJson(app)).toMatchSnapshot()
 
   expect(app.find(Home)).toHaveLength(0)
   expect(app.find('p').at(0).text()).toEqual("Hello, visitor. Sign in to continue.")
@@ -22,7 +21,6 @@ it("should render the Homepage for the logged in user (Heisenberg)", () => {
     username: "Heisenberg"
   }
   const app = mount(<App {...props} />)
-  expect(toJson(app)).toMatchSnapshot()
 
   expect(app.find(Home)).toHaveLength(1)
   expect(app.find('p').at(0).text()).toEqual("Welcome, Heisenberg!")
@@ -40,7 +38,6 @@ it("should render the Homepage for the logged in user without tasks", () => {
     username: "Jesse"
   }
   const app = mount(<App {...props} />)
-  expect(toJson(app)).toMatchSnapshot()
 
   expect(app.find(Home)).toHaveLength(1)
   expect(app.find('p').at(0).text()).toEqual("Welcome, Jesse!")
